@@ -1,0 +1,269 @@
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin:0px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+div {
+  max-width: 100%;
+  max-height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: underline;
+  color: #005272;
+}
+.heroSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(33,33,33,0.5), rgba(33,33,33,0.5)), url(../images/art-big-data-blur-373543.jpg);
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-position: 50%;
+  margin-top:90px;
+  background-attachment: fixed;
+}
+.heroTitle {
+  color:#fff;
+  font-size:36px;
+  line-height:125%;
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+}
+.menu {
+  display:none;
+}
+.heroSubTitle {
+  color:#fff;
+  font-size:24px;
+  line-height:125%;
+  text-align:center;
+}
+.basicSection {
+  padding-top:60px;
+  padding-bottom:60px;
+}
+#darkSection {
+  background-color: rgb(33,33,33);
+  color: #fff;
+}
+.basicContainer {
+  width:60%;
+  margin:auto;
+}
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+html{
+  scroll-behavior:smooth
+}
+nav {
+  height:90px;
+  background-color:rgba(33,33,33);
+  display:flex;
+  padding-left:10%;
+  padding-right: 10%;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.logo {
+  width: auto;
+  height: 60px;
+  filter: brightness(0) invert(1);
+}
+.nav-logo {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:40%;
+}
+.nav-links {
+  width:40%;
+  justify-content: flex-end;
+  display:flex;
+  align-items: center;
+}
+.nav-links a {
+  color: #fff;
+  margin-left:10px;
+  margin-right:10px;
+}
+.portal {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom:10px;
+}
+.portal:hover > .front {
+  transform: rotateY(90deg);
+}
+.portal:hover > .back {
+  transform: rotateY(0deg);
+}
+/* Menu icon found on https://icons8.com/icons/set/menu */
+.menu {
+  background-image:url(https://img.icons8.com/cotton/64/000000/menu.png);
+  width:64px;
+  height:64px;
+  position:relative;
+}
+.menu .menuholder {
+  width:0px;
+  height:auto;
+  position:fixed;
+  right:0px;
+  display:flex;
+  background-color: rgb(33,33,33);
+  color:white;
+  flex-direction:column;
+  padding-top:90px;
+  padding-bottom:90px;
+  height:100vh;
+  transition: all 500ms ease;
+}
+.menuholder a {
+  color:white;
+  margin-left:15px;
+  margin-right:15px;
+}
+.menuholder.visible {
+  width: auto;
+}
+.portal .back {
+  transform: rotateY(90deg);
+  transition: all 500ms linear;
+  padding: 25px;
+  position: absolute;
+  background: linear-gradient(120deg, #00F260, #0575E6);
+  max-height:105px;
+  width:100%;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.3);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+}
+.portal .front {
+  transition: all 500ms linear;
+  /*position: absolute;*/
+  background: linear-gradient(120deg, #0575E6, #00F260);
+  padding: 25px;
+  max-height:105px;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.portalContainer {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.parallaxsec {
+  background-attachment: fixed;
+  /*background-image: url(../images/art-big-data-blur-373543.jpg);*/
+  height: 100vh;
+  background-position: 50%;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-size:100%;
+}
+.parallaxsec.glyph {
+  background-image: url(../images/glyph.png);
+}
+.parallaxsec.glyph.black {
+  background-image: url(../images/glyph_b.png);
+}
+.parallaxsec.dci {
+  background-image: url(../images/dci.png);
+}
+.parallaxsec.dci.black {
+  background-image: url(../images/dci_b.png);
+}
+.parallaxsec.midpoint {
+  background-image: url(../images/midpoint.png);
+}
+.parallaxsec.midpoint.black {
+  background-image: url(../images/midpoint_b.png);
+}
+.information {
+  position: absolute;
+  height: auto;
+  width:60%;
+  margin:auto;
+  text-align:center;
+  background-color: #fff;
+  max-height: unset;
+  padding:25px;
+  height:fit-content;
+  top:5%;
+  bottom:5%;
+}
+.infoholder {
+  display:flex;
+  position:relative;
+  width:100%;
+  justify-content:center;
+}
+.parallaxsec p {
+  cursor: pointer;
+  background-color:#ccc;
+  padding:25px;
+  color:#333;
+  border-radius: 5px;
+}
+.transparent {
+  color: transparent !important;
+  background-color:transparent !important;
+}
+@media (max-width: 1500px) {
+  .portalContainer {
+    flex-wrap:wrap;
+  }
+  .parallaxsec {
+    background-size: cover;
+  }
+  .portal {
+    width: 100%;
+    margin-top:15px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 750px) {
+  .portal {
+    width:100%;
+
+  }
+  .parallaxsec {
+    background-size: cover;
+  }
+  .menu {
+    display:block;
+  }
+  .nav-links {
+    display:none;
+  }
+}

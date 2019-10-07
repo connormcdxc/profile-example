@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home | INST 377</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<meta name="description" content="The index file for my INST 377 master branch on Github. Can't wait to get this class started"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="top"></div>
+    <div>
+        <nav>
+            <div class="nav-logo">
+                <a href="#top"><img class="logo" src="images/cropped-logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-links">
+                <a href="#top">Top</a>
+                <a href="#dci">DCI</a>
+                <a href="#glyph">Glyphtech</a>
+                <a href="#midpoint">Midpoint</a>
+            </div>
+            <div class="menu">
+                <div class="menuholder">
+                    <a href="#top">Top</a>
+                    <a href="#dci">DCI</a>
+                    <a href="#glyph">Glyphtech</a>
+                    <a href="#midpoint">Midpoint</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section class="heroSection">
+        <div>
+            <h2 class="heroTitle">INST 377</h2>
+            <p class="heroSubTitle">Dynamic Web Applications</p>
+        </div>
+    </section>
+    <div id="nestholder">
+        <div id="nest1">
+            <!--Had issues with the jQuery animations of flipping, if you comment out .portal:hover > .front and .portal:hover > .back in styles.css and uncomment the script at the bottom of this page you can see the original effect.-->
+    <section class="basicSection" id="darkSection">
+        <div class="basicContainer portalContainer">
+            <div class="portal">
+                <div class="front">
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="back">
+                    <p>Extensive knowledge of web design</p>
+                </div>
+            </div>
+            <div class="portal">
+                <div class="front">
+                    <p>Javascript/jQuery</p>
+                </div>
+                <div class="back">
+                    <p>Experience with both front end and server side Javascript</p>
+                </div>
+            </div>
+            <div class="portal">
+                <div class="front">
+                    <p>PHP/Symphony</p>
+                </div>
+                <div class="back">
+                    <p>Extensive experience with Drupal 7 and 8 and Wordpress.</p>
+                </div>
+            </div>
+        </div>
+        <div class="basicContainer">
+            <p>Lorem ipsum dolor amet literally VHS fixie bitters freegan. Fixie art party tofu, organic occupy master cleanse affogato you probably haven't heard of them ethical mumblecore health goth cloud bread. Hoodie 3 wolf moon shabby chic, VHS vape yuccie put a bird on it marfa hella wolf affogato kitsch gluten-free iPhone pour-over. Street art cardigan art party bicycle rights forage XOXO vinyl subway tile pok pok etsy sartorial authentic.</p>
+        </div>
+    </section>
+</div>
+<div id="nest2">
+    <section class="basicSection parallaxsec dci black" id="dci">
+        
+    </section>
+    <div class="infoholder">
+            <div class="information">
+                <h2><a target="_blank" href="https://digitalcolorink.com">Digital Color Ink</a></h2>
+                <p>Digital Color Ink is a company that sells printers, ink, and graphical designs.</p>
+                <p>I was in charge of prototyping the site along with site development and integration with Drupal and Ubercart. The online store was particularly difficult because the store needed categories, sub categories, and products. The ability to filter categories, sub categories, and products was important for this project</p>
+                <p>A combination of php and jQuery were used to create the many facited filter options on these pages.</p>
+            </div>
+        </div>  
+    <section class="basicSection dci parallaxsec">
+        
+    </section>
+    <section class="basicSection parallaxsec glyph black" id="glyph">
+       
+    </section>
+    <div class="infoholder">
+        <div class="information">
+            <h2><a target="_blank" href="https://glyphtech.com">Glyphtech</a></h2>
+            <p>Glyphtech is a hard drive company based in New York. I worked with a team of designers to develop this Drupal site.</p>
+            <p>I was in charge of site development and integration with drupal. I was given a PSD design of what the site should look like, I coded the site in HTML, CSS, and JS, then used PHP and MySQL to integrate the code with Drupal.</p>
+        </div>
+    </div>  
+    <section class="basicSection glyph parallaxsec">
+        
+    </section>
+    <section class="basicSection parallaxsec midpoint black" id="midpoint">
+        
+    </section>
+    <div class="infoholder">
+            <div class="information">
+                <h2><a target="_blank" href="https://glyphtech.com">Midpoint</a></h2>
+                <p>Midpoint was one of the first multi page site integration with Drupal I had done. It was particularly difficult because of an integration with instagram that was needed on one of the back end pages, along with a custom dynamic menu system that was needed.</p>
+            </div>
+        </div>  
+    <section class="basicSection midpoint parallaxsec">
+        
+    </section>
+</div>
+</div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+   <!-- <script>
+        $('.parallaxsec p').click(function() {
+            $(this).toggleClass('transparent');
+        });
+
+        //Rotate portal on enter
+        $('.portal').mouseenter(function() {
+            var portal = this;
+            $( this ).find( ".front" ).delay( 500 ).css("transform", "rotateY(90deg)");
+            //Delay rotate so it seems like it's flipping   
+            setTimeout(function() {
+                $( portal ).find( ".back" ).css("transform", "rotateY(0deg)"); 
+            }, 500);
+              
+        });
+        
+        //Rotate portal on exit
+        $('.portal').mouseleave(function() {
+            var portal = this;
+            $( this ).find( ".back" ).delay( 500 ).css("transform", "rotateY(90deg)");
+            //Delay rotate so it seems like it's flipping
+            setTimeout(function() {
+                $( portal ).find( ".front" ).css("transform", "rotateY(0deg)"); 
+            }, 500);
+        });
+    </script>-->
+    <script>
+        $('.menu').click(function() {
+            $('.menu .menuholder').toggleClass('visible');
+        });
+    </script>
+</body>
+</html>
