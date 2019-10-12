@@ -13,7 +13,7 @@
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
       <button class="button" onclick="countriesLoop();">Click me to replace list entries</button>
       <div class="content">
-        <ol class="instructions">
+        <ul class="instructions">
           <li>Delete and re-clone the class repository</li>
           <li>Open <span class="code">lab_5_json.html</span> in your browser</li>
           <li>Open your developer tools and look at the logged data</li>
@@ -282,15 +282,15 @@
   function countriesLoop() {
     sessionStorage.setItem('countries', JSON.stringify(countries));
     var maybeobj = JSON.parse(sessionStorage.getItem('countries'));
-    var list1 = document.querySelector(".instructions");
-    list1.innerHTML = '';
+    let list = document.querySelector(".instructions");
+    list.innerHTML = '';
     for (let i = 0; i < 50; i++) {
-        let randomNum = Math.floor(Math.random() * Math.floor(maybeobj.length-i));
-        let names = maybeobj.map((randomNum) => randomNum.name);
+        randomNum = Math.floor(Math.random() * Math.floor(maybeobj.length));
         let li = document.createElement("LI");
-        let text = document.createTextNode(maybeobj[randomNum].name);
+        let text = document.createTextNode(i+1 + ": " + maybeobj[randomNum].name);
+        console.log(text);
         li.append(text);
-        list1.append(li);
+        list.append(li);
     }
   }
   </script>
