@@ -20,8 +20,11 @@
       fetch('ajax_sample.json')
         .then(res => res.json())
         .then(res => res.map(c => c.code))
+        .then(console.log(c))
+        .then(li => document.createElement("LI"))
         .then(codes => document.querySelector(".content").innerText = codes);
     }
+    
   </script>
 </body>
 
