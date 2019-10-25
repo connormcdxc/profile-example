@@ -17,9 +17,53 @@
   </div>
   <script>
     function loadData() {
-      fetch('https://api.umd.io/v0/courses/ENGL101')
+      fetch('https://api.umd.io/v0/bus/routes')
         .then(res => res.json())
-        .then(data => document.querySelector(".content").innerText = data);
+        .then(res => res.map(c => c))
+        .then(res => {
+          let ul = document.createElement("ul");
+          let codes = document.querySelector(".content");
+          codes.innerHTML = '';
+          console.log(res);
+          for (let i = 0; i < res.length; i++) {
+            console.log("success");
+            let li = document.createElement("li");
+            let text = document.createTextNode(res[i].title);
+            li.append(text);
+            ul.append(li);
+          }
+          codes.append(ul);
+          return res;
+        })
+        .then(res => {
+          var found = res.find(function(element) {
+            return element.title == "114 University View";
+          });
+          let codes = document.querySelector(".header");
+          for(let i = 0; i < res.length; i++) {
+            text = document.createTextNode(res[i].title);
+
+            codes.innerHTML = "UMD Bus Routes " + text;
+          }
+        })
+        /*.then(res => {
+          let ul = document.getElementsByTagName("ul")[0];
+          let codes = document.querySelector(".content");
+          let text = '';
+          for (let i = 0; i < res.length; i++) {
+            if(res[i].route_id == 114) {
+              let li = document.createElement("li");
+              text = document.createTextNode(res[i].title);
+              li.append(text);
+              ul.append(li);
+            }
+          }
+          codes.append(ul);
+          return text;
+        }) */
+        .then(res => {
+          console.log(res);
+        })
     }
   </script>
 </body>
