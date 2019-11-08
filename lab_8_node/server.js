@@ -55,6 +55,7 @@ app.get('/api', (req, res) => {
       }
       //var myjson = JSON.stringify(array);
       res.send({ array });
+      console.log(array);
     })
     .catch((err) => {
       console.log(err);
